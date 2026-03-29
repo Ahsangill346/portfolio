@@ -1,0 +1,283 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000000c8;
+    color: #e0e0e093;
+}
+
+/* NAVBAR */
+header {
+    background: #001f3f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-box {
+    width: 80px;            /* size of box */
+    height: 80px;           /* same for circle */
+    border-radius: 50%;     /* makes it circular */
+    overflow: hidden;       /* keeps image inside circle */
+    border: 2px solid #00adb5; /* optional border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* optional: white background */
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures full image fills circle */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: lch(94.1% 0.01 296.81 / 0.483);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00adb5;
+}
+/* HERO SECTION */
+#home {
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?cs=srgb&dl=pexels-harold-vasquez-853421-2653362.jpg&fm=jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#home img {
+    width: 160px;          /* size of image */
+    height: 160px;
+    border-radius: 50%;    /* makes it circle */
+   object-position: center top;    /* keeps image proper */
+    display: block;
+    margin: 0 auto 20px;   /* centers horizontally */
+    border: 4px solid #00adb5;
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.6);
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.home-content {
+    position: relative;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    color: #00adb5;
+}
+
+.home-content p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* TYPING EFFECT */
+.typing {
+    border-right: 3px solid #00adb5;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    color: #00adb5;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+
+
+/* ABOUT */
+
+
+#about p {
+    margin-bottom: 20px; /* space between paragraph and boxes */
+    color: #0000008f; /* new color for paragraph */
+    font-size: 1.1rem; /* optional: slightly bigger text */
+}
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.about-info div {
+    background: #001f3f;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.about-info div:hover {
+    transform: translateY(-5px);
+}
+
+/* BUTTON */
+.btn {
+    background: #00adb5;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #00cfd6;
+}
+
+/*CV*/
+
+#cv {
+    display: flex;
+    flex-direction: column;      /* stack heading and button vertically */
+    align-items: center;         /* center horizontally */
+    justify-content: center;     /* center vertically if needed */
+    margin: 15px 0;  
+    padding: 18px;           /* space above and below */
+}
+
+#cv h2 {
+    color: #00adb5;              /* teal heading color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#cv .btn {
+    background-color: #00adb5;   /* teal button background */
+    color: #000;                 /* black text */
+    padding: 15px 55px;          /* nice button size */
+    border-radius: 10px;         /* rounded corners */
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;                   /* space between icon and text */
+    transition: background 0.3s;
+}
+
+#cv .btn:hover {
+    background-color: #00cfd6;   /* lighter teal on hover */
+}
+/* PROJECTS */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #001f3f;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background:#001f3f;
+}
+
+/* GALLERY */
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: 220px;          /* 👈 SAME HEIGHT FOR ALL */
+    object-fit: cover;      /* 👈 CROP NICELY */
+    border-radius: 10px;
+}
+
+/* CONTACT */
+/* Center all content in Contact section */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    color:  #00adb5; /* email and phone label in black */
+    margin: 5px 0;  /* optional: small spacing between lines */
+}
+
+#contact a {
+    color: #00adb5; /* links color */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #00cfd6; /* hover color */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+}
